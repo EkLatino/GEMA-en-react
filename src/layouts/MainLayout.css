@@ -1,0 +1,164 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* ===== Encabezado ===== */
+  .encabezado {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 28px;
+    background: #151518;
+    border-bottom: 1px solid #26262b;
+  }
+  
+  .encabezado-logo {
+    height: 120px; /* Dimensiones altura de la imagen en el encabezado */
+    width: 120px; /* Dimensiones ancho de la imagen en el encabezado */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .encabezado-texto {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .encabezado-texto strong {
+    font-size: 2.2rem; /* Dimensiones letra en el encabezado */
+    letter-spacing: 6px; /* Espaciado de la letra en el encabezado */
+  }
+  
+  .encabezado-texto span {
+    font-size: 1.1rem; /* Dimensiones subtitulo en el encabezado */
+    color: #9ca0ad;
+  }
+  
+  /* ===== Cuerpo: menú + contenido ===== */
+  .layout-cuerpo {
+    display: flex;
+    flex: 1;
+  }
+  
+  .menu-lateral {
+    width: 240px;
+    padding: 28px 20px;
+    background: #0b0b2b; /* 101014 */ /* Color background menú lateral */
+    border-right: 1px solid #26262b;
+  }
+  
+  .menu-lateral h2 {
+    margin: 0 0 16px;
+    padding-bottom: 14px;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #f58220;
+    border-bottom: 3px solid #f58220;
+  }
+  
+  .menu-lateral nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-lateral a {
+    padding: 14px;
+    color: #c9cbd3;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .menu-lateral a:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+  }
+  
+  .menu-lateral a.active {
+    color: #fff;
+    background: rgba(245, 130, 32, 0.12);
+    border-left-color: #f58220;
+  }
+  
+  .contenido {
+    flex: 1;
+    padding: 36px;
+  }
+  
+  /* ===== Contenido de las páginas (reutilizable) ===== */
+  .pagina-titulo {
+    margin: 0 0 8px;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  
+  .pagina-descripcion {
+    margin: 0 0 28px;
+    color: #9ca0ad;
+  }
+  
+  .tarjeta {
+    padding: 24px;
+    background: #151518;
+    border: 1px solid #26262b;
+  }
+  
+  .tarjetas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .tarjeta-numero {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #f58220;
+  }
+  
+  .tarjeta-etiqueta {
+    margin: 4px 0 0;
+    color: #9ca0ad;
+    font-size: 0.9rem;
+  }
+  
+  /* ===== Pantallas pequeñas ===== */
+  @media (max-width: 800px) {
+    .layout-cuerpo {
+      flex-direction: column;
+    }
+  
+    .menu-lateral {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #26262b;
+    }
+  
+    .menu-lateral nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .contenido {
+      padding: 20px;
+    }
+  }
+
+  .btn-cerrar {
+    padding: 14px;
+    font: inherit;
+    text-align: left;
+    color: #c9cbd3;
+    background: none;
+    border: none;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+  }
+  
+  .btn-cerrar:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+  }

@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0d0d0f;
+  color: #fff;
+  font-family: 'Inter Variable', Inter, system-ui, sans-serif;
+}
