@@ -1,0 +1,35 @@
+.tarjeta {
+    max-width: 720px;
+    padding: 24px;
+    background: #151518;
+    border: 1px solid #26262b;
+  }
+  
+  .tarjeta label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #c9cbd3;
+  }
+  
+  .tarjeta input {
+    width: 100%;
+    padding: 13px 14px;
+    font: inherit;
+    color: #fff;
+    background: #0d0d0f;
+    border: 1px solid #3a3a42;
+    border-radius: 0;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .tarjeta input::placeholder {
+    color: #6b6d78;
+  }
+  
+  .tarjeta input:focus {
+    border-color: #f58220;
+    box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.25);
+  }

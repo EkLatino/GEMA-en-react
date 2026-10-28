@@ -11,6 +11,7 @@ function Login() {
     const [usuario, setUsuario] = useState('')
     const [clave, setClave] = useState('') // usuario y clave guardan lo que se escribe.
     const [error, setError] = useState('') // error guarda el mensaje cuando los datos no coinciden.
+    const [verClave, setVerClave] = useState(false) // controla si la contraseña se ve o no
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -26,6 +27,7 @@ function Login() {
   return (
     <main className="login-pagina">
       <section className="login-hero">
+        
         <div className="login-logo">
           <img src={logo} alt="GEMA - Gestión de Equipos, Materiales y Almacén" />
         </div>
@@ -40,7 +42,8 @@ function Login() {
 
           <div className="campo">
             <label htmlFor="usuario">Usuario</label>
-            <input id="usuario" 
+            <input 
+            id="usuario" 
             type="email" 
             placeholder="correo@empresa.com" 
             value={usuario}
@@ -48,15 +51,42 @@ function Login() {
             />
           </div>
 
-          <div className="campo">
+        <div className="campo">
             <label htmlFor="clave">Contraseña</label>
-            <input id="clave" 
-            type="password" 
-            placeholder="contraseña" 
-            value={clave}
-            onChange={(e) => { setClave(e.target.value); setError('') }}
+          
+          <div className='campo-clave'>
+            <input 
+              id="clave" 
+              type={verClave ? 'text' : 'password'}
+              placeholder="contraseña" 
+              value={clave}
+              onChange={(e) => { setClave(e.target.value); setError('') }}
             />
-          </div>
+
+            <button
+              type="button"
+              className="btn-ojo"
+              onClick={() => setVerClave((prev) => !prev)}
+              aria-label={verClave ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            >
+              {verClave ? (
+                  /* Ojo tachado */
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" />
+                    <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" />
+                    <path d="M14.12 14.12a3 3 0 1 1-4.24-4.24" />
+                    <line x1="1" y1="1" x2="23" y2="23" />
+                  </svg>
+                ) : (
+                  /* Ojo abierto */
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                )}
+              </button>
+          </div> 
+        </div>
 
           <div className="login-acciones">
             <button type="submit" className="btn btn-blanco">Iniciar sesión</button>
