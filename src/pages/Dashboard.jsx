@@ -1,6 +1,6 @@
 const resumen = [
-    { numero: 128, etiqueta: 'Herramientas registradas' },
-    { numero: 14, etiqueta: 'Préstamos activos' },
+    { numero: 12, etiqueta: 'Herramientas registradas' },
+    { numero: 7, etiqueta: 'Préstamos activos' },
     { numero: 5, etiqueta: 'Devoluciones pendientes' },
     { numero: 3, etiqueta: 'Alertas de stock' },
   ]

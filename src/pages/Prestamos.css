@@ -33,3 +33,9 @@
     border-color: #f58220;
     box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.25);
   }
+
+
+  /* ===== Calendario ===== */
+  .tarjeta input[type="date"] {
+    color-scheme: dark;
+  }

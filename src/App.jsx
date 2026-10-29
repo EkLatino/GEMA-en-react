@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard'
 import Herramientas from './pages/Herramientas'
 import Prestamos from './pages/Prestamos'
 import Devoluciones from './pages/Devoluciones'
+import Solicitudes from './pages/Solicitudes'
 import Reportes from './pages/Reportes'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/herramientas" element={<Herramientas />} />
           <Route path="/prestamos" element={<Prestamos />} />
           <Route path="/devoluciones" element={<Devoluciones />} />
+          <Route path="/solicitudes" element={<Solicitudes />} />
           <Route path="/reportes" element={<Reportes />} />
         </Route>
       </Route>

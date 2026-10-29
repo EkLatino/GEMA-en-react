@@ -1,7 +1,7 @@
 import { useState } from "react"; 
 
 function Prestamos() {
-  const [solicitante, setSolicitante] = useState("")
+  const [solicitantePrestamo, setSolicitantePrestamo] = useState("")
   const [herramienta, setHerramienta] = useState('')
   const [cantidad, setCantidad] = useState('')
   const [fechaPrestamo, setFechaPrestamo] = useState('')
@@ -18,13 +18,14 @@ function Prestamos() {
         <div className="tarjeta form-grid">
 
           <div className="campo">
-            <label htmlFor="solicitante">Nombre del solicitante</label>
+            <label htmlFor="solicitantePrestamo">Nombre del solicitante</label>
             <input 
-            id="solicitante"
+            id="ssolicitantePrestamo"
             type="text" 
             placeholder="nombres y apellidos" 
-            value={solicitante}
-            onChange={(e) => { setSolicitante(e.target.value); setError('') }} 
+            value={solicitantePrestamo}
+
+            onChange={(e) => { setSolicitantePrestamo(e.target.value); setError('') }} 
             />
           </div>
 

@@ -5,6 +5,7 @@ const opciones = [
   { ruta: '/herramientas', texto: 'Herramientas' },
   { ruta: '/prestamos', texto: 'Préstamos' },
   { ruta: '/devoluciones', texto: 'Devoluciones' },
+  { ruta: '/solicitudes', texto: 'Solicitudes' },
   { ruta: '/reportes', texto: 'Reportes' },
 ]
 
